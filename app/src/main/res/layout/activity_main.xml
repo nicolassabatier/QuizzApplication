@@ -10,51 +10,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nicolassabatier.quizzapplication.MainActivity">
 
-    <Button
-        android:text="2 Players"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:id="@+id/twoPlayer"
-        android:layout_below="@+id/onePlayer"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="1 PLayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/onePlayer"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/twoPlayer"
-        android:layout_alignEnd="@+id/twoPlayer"
-        android:layout_alignLeft="@+id/twoPlayer"
-        android:layout_alignStart="@+id/twoPlayer" />
-
     <TextView
-        android:text="How many players will play ?"
+        android:text="@string/Welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        tools:text="How many players will play ?"
-        android:layout_marginBottom="24dp"
-        android:layout_above="@+id/onePlayer"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="77dp"
-        android:layout_marginEnd="77dp" />
-
-    <TextView
-        android:text="Welcome to our Quizz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        tools:text="      Welcome to our Quizz"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:fontFamily="monospace"
-        android:textSize="18sp"
-        android:layout_marginBottom="22dp"
-        android:layout_above="@+id/textView3"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="127dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="100dp"
+        android:id="@+id/textView2" />
 
+    <Button
+        android:text="@string/One_playerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:id="@+id/One_playerButton" />
+
+    <Button
+        android:text="@string/Two_playersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/One_playerButton"
+        android:layout_alignRight="@+id/One_playerButton"
+        android:layout_alignEnd="@+id/One_playerButton"
+        android:layout_marginTop="36dp"
+        android:id="@+id/Two_playersButton" />
 </RelativeLayout>
