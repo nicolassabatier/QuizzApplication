@@ -8,17 +8,18 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="@string/name"
-        android:layout_weight="0.34" />
+
+        android:id="@+id/registration_name"/>
 
     <Button
         android:text="@string/Start_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Start_Button"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="206dp"
+        android:textSize="12sp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="10sp" />
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
