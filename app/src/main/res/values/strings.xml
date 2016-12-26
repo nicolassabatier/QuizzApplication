@@ -5,4 +5,6 @@
     <string name="Two_playersButton">2 Players</string>
     <string name="name">Name</string>
     <string name="Start_Button">Start</string>
+    <string name="Player_Table">Player</string>
+    <string name="Player_Score">Score</string>
 </resources>
