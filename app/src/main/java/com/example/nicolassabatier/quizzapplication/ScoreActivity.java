@@ -17,18 +17,25 @@ import static android.R.layout.simple_list_item_1;
 public class ScoreActivity extends AppCompatActivity {
     //ArrayList<String> playername = new ArrayList();
     static ArrayList<String> rrlist = new ArrayList<String>();
+    static ArrayList<Integer> rrlist2=new ArrayList<Integer>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
         Intent intent = getIntent();
 
-        String  newPlayername =(String) intent.getSerializableExtra("playername");
-        rrlist.add(newPlayername);
+        Player  newPlayer =(Player) intent.getSerializableExtra("aplayer");
+        rrlist.add(newPlayer.getName());
+        rrlist2.add(newPlayer.getScore());
         ListView PlayerList= (ListView) findViewById(R.id.player_name_list);
+        ListView ScoreList= (ListView) findViewById(R.id.Score_list);
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, simple_list_item_1, rrlist);
         PlayerList.setAdapter(adapter);
+        ArrayAdapter<Integer> adapter_score = new ArrayAdapter<Integer>(this, simple_list_item_1, rrlist2);
+        ScoreList.setAdapter(adapter_score);
+
         Button mButton = (Button) findViewById(R.id.restart);
         mButton.setOnClickListener(new View.OnClickListener()
         {

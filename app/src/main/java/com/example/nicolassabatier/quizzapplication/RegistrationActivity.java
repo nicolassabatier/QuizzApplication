@@ -38,9 +38,11 @@ public class RegistrationActivity extends AppCompatActivity
                 EditText nameField = (EditText) findViewById(R.id.registration_name);
                 String name = nameField.getText().toString();
                 aplayer.setName(name);
-                String playername = aplayer.getName();
+                aplayer.setScore(15);
+
+                //playername = aplayer.getName();
                 Intent intention = new Intent(RegistrationActivity.this,ScoreActivity.class);
-                intention.putExtra("playername",playername);
+                intention.putExtra("aplayer",aplayer);
                 startActivity(intention);
 
             }
