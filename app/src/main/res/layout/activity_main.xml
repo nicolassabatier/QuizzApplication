@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -11,63 +12,36 @@
     tools:context="com.example.nicolassabatier.quizzapplication.MainActivity">
 
     <Button
-        android:text="2 Players"
+        android:text="@string/One_playerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:id="@+id/twoPlayer"
-        android:layout_below="@+id/onePlayer"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="1 PLayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/onePlayer"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/twoPlayer"
-        android:layout_alignEnd="@+id/twoPlayer"
-        android:layout_alignLeft="@+id/twoPlayer"
-        android:layout_alignStart="@+id/twoPlayer" />
-
-    <TextView
-        android:text="How many players will play ?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        tools:text="How many players will play ?"
-        android:layout_marginBottom="24dp"
-        android:layout_above="@+id/onePlayer"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="77dp"
-        android:layout_marginEnd="77dp" />
-
-    <TextView
-        android:text="Welcome to our Quizz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        tools:text="      Welcome to our Quizz"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:fontFamily="monospace"
-        android:textSize="18sp"
-        android:layout_marginBottom="22dp"
-        android:layout_above="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="START"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/One_playerButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp"/>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/united_kingdom"
+
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:text="@string/Welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="127dp"
+        android:id="@+id/textView2"
+        android:textSize="40dp"
+        android:layout_marginEnd="51dp"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="28dp"
-        android:onClick="sendMessage"
-        android:id="@+id/button_start"/>
+        android:layout_marginTop="23dp"
+        android:textColor="@color/colorPrimary"/>
+
 
 </RelativeLayout>
