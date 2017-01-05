@@ -36,6 +36,10 @@ public class Country implements Parcelable {
         mName = name;
     }
 
+    public boolean equals(Country otherCountry){
+        return (this.getFlagResId()==otherCountry.getFlagResId());
+    }
+
 
     protected Country(Parcel in) {
         mFlagResId = in.readInt();

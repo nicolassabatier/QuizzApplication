@@ -11,6 +11,15 @@ public class MainActivity extends AppCompatActivity {
     private Button mOnePlayer;
     private Button mTwoPlayer;
 
+    public Country[] mCountryBank = new Country[] {
+            new Country(R.drawable.asean, "ASEAN"), new Country(R.drawable.afghanistan, "Afghanistan"), new Country(R.drawable.albania, "Albania"),
+            new Country(R.drawable.africanunion, "African Union"), new Country(R.drawable.anericansanoa, "Americans Amoa"), new Country(R.drawable.algeria, "Algeria"),
+            new Country(R.drawable.bangladesh, "Bangladesh"), new Country(R.drawable.bahrain, "Bahrain"),
+            new Country(R.drawable.barbados, "Barbados"), new Country(R.drawable.belarus, "Belarus"),
+            new Country(R.drawable.belize, "Belize"), new Country(R.drawable.benin, "Benin"),
+            new  Country(R.drawable.bhutan, "Bhutan"), new Country(R.drawable.bolivia, "Bolivia"), new Country(R.drawable.bosniaherzegovina, "Bosnia Herzegovina"),
+            new Country(R.drawable.vanutau, "Vanutau"),
+    };
 
 
     @Override
@@ -30,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMessage(View view)
     {
-        Intent intent = new Intent(this, QuestionListActivity.class);
-        startActivity(intent);
+        ListOfQuestion mListOfQuestion = new ListOfQuestion(mCountryBank);
+        Intent i = QuestionListActivity.newIntent(MainActivity.this, mListOfQuestion);
+        startActivity(i);
     }
 
 }
