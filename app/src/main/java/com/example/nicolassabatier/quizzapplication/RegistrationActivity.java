@@ -19,7 +19,7 @@ import static com.example.nicolassabatier.quizzapplication.R.id.player_name_list
 public class RegistrationActivity extends AppCompatActivity
 {
 
-    //public ArrayList<Player> playername = new ArrayList<Player>();
+    public ArrayList<Player> playername = new ArrayList<Player>();
 
 
     @Override
@@ -38,9 +38,10 @@ public class RegistrationActivity extends AppCompatActivity
                 EditText nameField = (EditText) findViewById(R.id.registration_name);
                 String name = nameField.getText().toString();
                 aplayer.setName(name);
-                String playername = aplayer.getName();
-                Intent intention = new Intent(RegistrationActivity.this,ScoreActivity.class);
-                intention.putExtra("playername",playername);
+                aplayer.setScore(15);
+                //playername = aplayer.getName();
+                Intent intention = new Intent(RegistrationActivity.this,Playing.class);
+                intention.putExtra("aplayer",aplayer);
                 startActivity(intention);
 
             }

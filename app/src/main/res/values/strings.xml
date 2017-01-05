@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Quizz Application</string>
+    <string name="Welcome_message">The Flag Quizz </string>
+    <string name="One_playerButton">Registration</string>
+    <string name="name2">Second Player Name</string>
+
+    <string name="name">Name</string>
+    <string name="Start_Button">Start</string>
+    <string name="Player_Table">Player</string>
+    <string name="Player_Score">Score</string>
 </resources>
